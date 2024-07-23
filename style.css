@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.tab {
+    background-color: #f1f1f1;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 20px;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    border-radius: 25px;
+    margin: 0 5px;
+}
+
+.tab.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.tab .badge {
+    background-color: #007bff;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 50%;
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    border-top: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#development {
+    display: block;
+}

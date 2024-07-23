@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Tabs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="tabs">
+        <button class="tab" id="upcoming-tab" onclick="openTab('upcoming', this)">Upcoming </button>
+        <button class="tab active" id="development-tab" onclick="openTab('development', this)">Development</button>
+        <button class="tab" id="completed-tab" onclick="openTab('completed', this)">Completed</button>
+    </div>
+
+    <div class="tab-content" id="upcoming">Upcoming Content</div>
+    <div class="tab-content" id="development">Development Content</div>
+    <div class="tab-content" id="completed">Completed Content</div>
+
+    <script >
+        function openTab(tabName, element) {
+    var i;
+    var tabcontent = document.getElementsByClassName("tab-content");
+    var tabs = document.getElementsByClassName("tab");
+
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    
+    for (i = 0; i < tabs.length; i++) {
+        tabs[i].className = tabs[i].className.replace(" active", "");
+    }
+
+    document.getElementById(tabName).style.display = "block";
+    element.className += " active";
+}
+
+    </script>
+</body>
+</html>
